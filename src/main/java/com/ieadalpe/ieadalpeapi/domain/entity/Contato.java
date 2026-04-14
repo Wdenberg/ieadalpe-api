@@ -24,8 +24,8 @@ public class Contato {
     @Column(name = "email", nullable = false, length = 180)
     private String email;
 
-    @Lob
-    @Column(name = "mensagem", nullable = false)
+
+    @Column(name = "mensagem", nullable = false, columnDefinition = "TEXT")
     private String mensagem;
 
     @Column(name = "lida", nullable = false)

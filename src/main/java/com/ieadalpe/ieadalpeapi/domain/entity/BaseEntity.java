@@ -24,6 +24,6 @@ public class BaseEntity {
     private OffsetDateTime createdAt;
 
     @LastModifiedDate
-    @Column(name = "update_at")
+    @Column(name = "updated_at")
     private OffsetDateTime updateAt;
 }

@@ -21,8 +21,8 @@ public class Noticia extends BaseEntity {
     @Column(name = "titulo", nullable = false, length = 200)
     private String titulo;
 
-    @Lob
-    @Column(name = "conteudo", nullable = false)
+
+    @Column(name = "conteudo", nullable = false, columnDefinition = "TEXT")
     private String conteudo;
 
     @Column(name = "resumo", length = 500)

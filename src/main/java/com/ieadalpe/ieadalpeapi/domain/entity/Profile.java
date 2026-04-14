@@ -19,8 +19,8 @@ public class Profile extends BaseEntity{
     @Id
     private UUID id;
 
-    @Column(name = "name", length = 150)
-    private String name;
+    @Column(name = "nome", length = 150)
+    private String nome;
 
     @Column(name = "email", length = 150)
     private String email;

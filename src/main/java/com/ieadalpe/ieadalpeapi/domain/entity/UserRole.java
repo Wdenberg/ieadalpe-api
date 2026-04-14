@@ -28,7 +28,7 @@ public class UserRole extends BaseEntity {
     @JoinColumn(name = "user_id", nullable = false)
     private Profile user;
 
-    @Enumerated
+    @Enumerated(EnumType.STRING)
     @Column(name = "role", nullable = false, length = 20)
     private AppRole role;
 }
