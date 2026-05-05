@@ -1,5 +1,4 @@
-package com.ieadalpe.ieadalpeapi.domain.entity;
-
+package com.ieadalpe.ieadalpeapi.config;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;

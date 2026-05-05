@@ -1,5 +1,6 @@
 package com.ieadalpe.ieadalpeapi.domain.entity;
 
+import com.ieadalpe.ieadalpeapi.config.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -14,7 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Profile extends BaseEntity{
+public class Profile extends BaseEntity {
 
     @Id
     private UUID id;

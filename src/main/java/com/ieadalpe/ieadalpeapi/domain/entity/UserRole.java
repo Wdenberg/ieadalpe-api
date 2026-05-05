@@ -1,6 +1,7 @@
 package com.ieadalpe.ieadalpeapi.domain.entity;
 
 
+import com.ieadalpe.ieadalpeapi.config.BaseEntity;
 import com.ieadalpe.ieadalpeapi.domain.enums.AppRole;
 import jakarta.persistence.*;
 import lombok.*;
