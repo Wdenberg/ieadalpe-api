@@ -1,6 +1,7 @@
 package com.ieadalpe.ieadalpeapi.service.impl;
 
 import com.ieadalpe.ieadalpeapi.domain.entity.Documento;
+import com.ieadalpe.ieadalpeapi.domain.entity.Obreiro;
 import com.ieadalpe.ieadalpeapi.dto.request.DocumentoCreateRequest;
 import com.ieadalpe.ieadalpeapi.dto.response.DocumentoResponse;
 import com.ieadalpe.ieadalpeapi.exception.ResourceNotFoundException;
@@ -51,6 +52,14 @@ public class DocumentoServiceImpl implements DocumentoService {
                 .toList();
     }
 
+    @Override
+    @Transactional
+    public void delete(UUID id) {
+        Documento entity = repository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Documento não encontrado."));
+        repository.delete(entity);
+    }
+
     private DocumentoResponse toResponse(Documento entity) {
         return new DocumentoResponse(
                 entity.getId(),
@@ -63,4 +72,5 @@ public class DocumentoServiceImpl implements DocumentoService {
                 entity.getUpdatedAt()
         );
     }
+
 }

@@ -1,5 +1,6 @@
 package com.ieadalpe.ieadalpeapi.service.impl;
 
+import com.ieadalpe.ieadalpeapi.domain.entity.Documento;
 import com.ieadalpe.ieadalpeapi.domain.entity.Noticia;
 import com.ieadalpe.ieadalpeapi.domain.entity.Profile;
 import com.ieadalpe.ieadalpeapi.dto.request.NoticiaCreateRequest;
@@ -66,6 +67,14 @@ public class NoticiaServiceImpl implements NoticiaService {
         );
 
         return toPagedResponse(result);
+    }
+
+    @Override
+    @Transactional
+    public void delete(UUID id) {
+        Noticia entity = noticiaRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Documento não encontrado."));
+        noticiaRepository.delete(entity);
     }
 
     private PagedResponse<NoticiaResponse> toPagedResponse(Page<Noticia> result) {
