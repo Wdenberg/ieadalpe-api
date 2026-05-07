@@ -1,6 +1,7 @@
 package com.ieadalpe.ieadalpeapi.dto.response;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
@@ -14,7 +15,7 @@ public record SolicitacaoObreiroResponse(
         String congregacao,
         String status,
         String motivoRejeicao,
-        OffsetDateTime createdAt,
-        OffsetDateTime updatedAt
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
 ) {
 }

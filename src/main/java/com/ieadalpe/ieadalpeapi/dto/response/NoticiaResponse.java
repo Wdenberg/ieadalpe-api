@@ -1,6 +1,6 @@
 package com.ieadalpe.ieadalpeapi.dto.response;
 
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public record NoticiaResponse(
@@ -12,7 +12,7 @@ public record NoticiaResponse(
         Boolean publicada,
         UUID autorId,
         String autorNome,
-        OffsetDateTime createdAt,
-        OffsetDateTime updatedAt
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
 ) {
 }

@@ -3,6 +3,7 @@ package com.ieadalpe.ieadalpeapi.domain.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
@@ -29,5 +30,5 @@ public class EboParticipacao {
     private String status;
 
     @Column(name = "created_at", nullable = false, updatable = false)
-    private java.time.OffsetDateTime createdAt;
+    private LocalDateTime createdAt;
 }

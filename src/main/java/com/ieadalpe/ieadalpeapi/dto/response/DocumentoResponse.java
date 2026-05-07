@@ -1,5 +1,6 @@
 package com.ieadalpe.ieadalpeapi.dto.response;
 
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
@@ -10,7 +11,7 @@ public record DocumentoResponse(
         String arquivoUrl,
         String tipo,
         String visibilidade,
-        OffsetDateTime createdAt,
-        OffsetDateTime updatedAt
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
 ) {
 }

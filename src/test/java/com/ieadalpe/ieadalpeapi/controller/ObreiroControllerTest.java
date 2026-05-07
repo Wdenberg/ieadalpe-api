@@ -12,6 +12,7 @@ import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.time.LocalDateTime;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
@@ -64,8 +65,8 @@ class ObreiroControllerTest {
                 null,
                 false,
                 null,
-                OffsetDateTime.now(),
-                OffsetDateTime.now()
+                LocalDateTime.now(),
+                LocalDateTime.now()
         );
 
         Mockito.when(obreiroService.create(Mockito.any())).thenReturn(response);

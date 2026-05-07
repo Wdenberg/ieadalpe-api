@@ -1,7 +1,9 @@
 package com.ieadalpe.ieadalpeapi.service.impl;
 
 import com.ieadalpe.ieadalpeapi.dto.request.AuthLoginRequest;
+import com.ieadalpe.ieadalpeapi.dto.request.UserRegisterRequest;
 import com.ieadalpe.ieadalpeapi.dto.response.AuthTokenResponse;
+import com.ieadalpe.ieadalpeapi.dto.response.UserResponse;
 import com.ieadalpe.ieadalpeapi.exception.BusinessException;
 import com.ieadalpe.ieadalpeapi.security.CustomUserDetailsService;
 import com.ieadalpe.ieadalpeapi.security.JwtTokenService;
@@ -36,4 +38,7 @@ public class AuthServiceImpl implements AuthService {
                 tokenData.expiresAt()
         );
     }
+
+
+
 }

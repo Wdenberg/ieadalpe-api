@@ -46,14 +46,18 @@ public class SecurityConfig {
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
                 .authorizeHttpRequests(auth -> auth
+
+                        //.requestMatchers("/api/v1/solicitacoes-obreiros/**").permitAll()
                         .requestMatchers(
                                 "/swagger-ui.html",
                                 "/swagger-ui/**",
                                 "/v3/api-docs/**",
                                 "/actuator/health",
                                 "/api/v1/health",
-                                "/api/v1/auth/**"
+                                "/api/v1/auth/**",
+                                "/error"
                         ).permitAll()
+                        .requestMatchers(HttpMethod.POST,"/api/v1/solicitacoes-obreiros" ).permitAll()
                         .requestMatchers(HttpMethod.GET, "/api/v1/noticias/publicadas").permitAll()
                         .anyRequest().authenticated()
                 )

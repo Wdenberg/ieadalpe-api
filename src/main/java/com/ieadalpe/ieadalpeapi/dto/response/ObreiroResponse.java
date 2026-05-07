@@ -1,7 +1,7 @@
 package com.ieadalpe.ieadalpeapi.dto.response;
 
 import java.time.LocalDate;
-import java.time.OffsetDateTime;
+import java.time.LocalDateTime;
 import java.util.UUID;
 
 public record ObreiroResponse(
@@ -18,8 +18,8 @@ public record ObreiroResponse(
         Integer anosObreiro,
         String fotoUrl,
         Boolean bloqueado,
-        OffsetDateTime ultimoAcesso,
-        OffsetDateTime createdAt,
-        OffsetDateTime updatedAt
+        LocalDateTime ultimoAcesso,
+        LocalDateTime createdAt,
+        LocalDateTime updatedAt
 ) {
 }
